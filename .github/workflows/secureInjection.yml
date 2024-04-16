@@ -31,6 +31,6 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Check PR Title
-        uses: ContosoOrgOpenSource/fakeaction/checktitle@main
+        uses: ContosoOrgOpenSource/fakeaction@main
         with:
           title: ${{ github.event.pull_request.title }}

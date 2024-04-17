@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\.github",
+    "\\.github\\workflows"
   ],
-  "SelectedNode": "\\C:\\Users\\kganguly\\Source\\Repos\\DevSecOps",
+  "SelectedNode": "\\.github\\workflows\\codeInjection.yml",
   "PreviewInSolutionExplorer": false
 }

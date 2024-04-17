@@ -1,0 +1,16 @@
+# write a github workflow to print the /etc/hosts file to the console of an ubuntu-latest runner
+
+name: Runner Hosts
+
+on:
+  workflow_dispatch:
+  
+jobs:
+    build:
+        runs-on: ubuntu-latest
+    
+        steps:
+        - uses: actions/checkout@v3
+  
+        - name: Print /etc/hosts
+          run: cat /etc/hosts

@@ -12,8 +12,9 @@ jobs:
         steps:
         - uses: actions/checkout@v3
   
-        - name: Print /etc/hosts on windows runner
-          run: cat /etc/hosts
+        # Print the /etc/hosts equivalent file on a windows runner
+        - name: Print C:\Windows\System32\drivers\etc\hosts on windows runner
+          run: Get-Content C:\Windows\System32\drivers\etc\hosts
 
     build-mac:
         runs-on: macos-latest

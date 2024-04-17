@@ -29,4 +29,14 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
-        run: title="${{ github.event.pull_request.title }}"
+        run: |
+          title="${{ github.event.pull_request.title }}"
+          if [[ $title =~ ^octocat ]]; then
+          echo "PR title starts with 'octocat'"
+          exit 0
+          else
+          echo "PR title did not start with 'octocat'"
+          exit 1
+          fi
+        
+ # To inject commands into this workflow, the attacker could create a pull request with a title of --> a"; ls $GITHUB_WORKSPACE"

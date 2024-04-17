@@ -30,4 +30,4 @@ jobs:
       - name: Check PR Title
         uses: ContosoOrgOpenSource/fakeaction@main
         with:
-          title: ${{ github.event.pull_request.title }}
+          title: ${{ github.event.pull_request.title }} # this line tries to use the github context to get the PR title and pass it to the action

@@ -6,11 +6,29 @@ on:
   workflow_dispatch:
   
 jobs:
-    build:
+    build-win:
+        runs-on: windows-latest
+    
+        steps:
+        - uses: actions/checkout@v3
+  
+        - name: Print /etc/hosts on windows runner
+          run: cat /etc/hosts
+
+    build-mac:
+        runs-on: macos-latest
+    
+        steps:
+        - uses: actions/checkout@v3
+  
+        - name: Print /etc/hosts on macos runner
+          run: cat /etc/hosts
+
+    build-ubuntu:
         runs-on: ubuntu-latest
     
         steps:
         - uses: actions/checkout@v3
   
-        - name: Print /etc/hosts
+        - name: Print /etc/hosts on ubuntu runner
           run: cat /etc/hosts

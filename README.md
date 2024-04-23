@@ -1,3 +1,3 @@
 # DevSecOps
 
-Checking Actions run for testing.
+Checking Actions run for testing with sample PR title.
